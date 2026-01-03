@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header id="main-header">
+        <h1 id="page-title">DOM Selectors Practice Page</h1>
+        <p class="subtitle highlight">Learn how to select and manipulate elements.</p>
+    </header>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="main-nav">
+        <ul class="navbar">
+            <li class="nav-item active"><a href="#section-products" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="#section-users" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="#section-form" class="nav-link">Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section id="section-products" class="section">
+        <h2 class="section-title">Products</h2>
+
+        <div class="product-card featured" data-product-id="101" data-category="electronics">
+            <h3 class="product-name">Laptop Pro</h3>
+            <p class="product-price">₹85,000</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-product-id="102" data-category="clothing">
+            <h3 class="product-name">T-Shirt</h3>
+            <p class="product-price">₹799</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-product-id="103" data-category="electronics">
+            <h3 class="product-name">Headphones</h3>
+            <p class="product-price">₹2,499</p>
+            <button class="btn btn-add-to-cart special-offer">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- ========== USERS SECTION (LIST + TABLE) ========== -->
+    <section id="section-users" class="section">
+        <h2 class="section-title">Users</h2>
+
+        <!-- Unordered list for simple selectors -->
+        <ul id="user-list">
+            <li class="user-item" data-role="admin">Vamsi (Admin)</li>
+            <li class="user-item" data-role="trainer">Nobitha (Trainer)</li>
+            <li class="user-item" data-role="student">Rahul (Student)</li>
+        </ul>
+
+        <!-- Table for more complex/nested selectors -->
+        <table id="user-table" border="1">
+            <thead>
+                <tr>
+                    <th class="col-name">Name</th>
+                    <th class="col-role">Role</th>
+                    <th class="col-status">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="user-row">
+                    <td class="user-name">Vamsi</td>
+                    <td class="user-role">Admin</td>
+                    <td class="user-status active-status">Active</td>
+                </tr>
+                <tr class="user-row">
+                    <td class="user-name">Nobitha</td>
+                    <td class="user-role">Trainer</td>
+                    <td class="user-status inactive-status">Inactive</td>
+                </tr>
+                <tr class="user-row">
+                    <td class="user-name">Rahul</td>
+                    <td class="user-role">Student</td>
+                    <td class="user-status active-status">Active</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- ========== FORM SECTION ========== -->
+    <section id="section-form" class="section">
+        <h2 class="section-title">Enquiry Form</h2>
+
+        <form id="enquiry-form">
+            <div class="form-group">
+                <label for="input-name">Name</label>
+                <input type="text" id="input-name" class="form-control" name="name" placeholder="Enter your name" />
+            </div>
+
+            <div class="form-group">
+                <label for="input-email">Email</label>
+                <input type="email" id="input-email" class="form-control" name="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="form-group">
+                <label for="select-course">Course</label>
+                <select id="select-course" class="form-control" name="course">
+                    <option value="">-- Select --</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="react">React</option>
+                    <option value="mern">MERN</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="checkbox-terms" name="terms" />
+                    I agree to the terms
+                </label>
+            </div>
+
+            <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
+            <button type="button" id="btn-reset" class="btn btn-secondary">Reset</button>
+        </form>
+
+        <p id="form-message" class="info-message" data-message-type="success">
+            <!-- You can update this text using DOM manipulation -->
+            Please fill the form and click Submit.
+        </p>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="main-footer">
+        <div class="footerContent" style="display:  flex; justify-content: space-evenly;">
+            <ul class="navbar">
+                <li class="nav-item active"><a href="#section-products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#section-users" class="nav-link">Users</a></li>
+                <li class="nav-item"><a href="#section-form" class="nav-link">Form</a></li>
+            </ul>
+
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+        </div>
+        <p class="footer-text">© 2025 DOM Practice Page</p>
+    </footer>
+   <script src="./app.js"></script>
+</body>
+</html>
