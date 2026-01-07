@@ -42,7 +42,7 @@ function updateCountDown() {
     let seconds = Math.floor((distance % (60 * 1000)) / (1000));
     console.log(minutes);
 
-    document.getElementById("countDown").innerHTML = days + "d  " + hours + "  h  " + minutes + "  m  " + seconds + "  s  ";
+    document.getElementById("countDown").innerHTML = days + "d  " + hours + "h  " + minutes + "m  " + seconds + "s  ";
 }
 updateCountDown();
 setInterval(updateCountDown, 1000);
