@@ -60,6 +60,7 @@ let array = [
 
 let array2 = document.getElementById("array1");
 
+
 // show products
 for (let i = 0; i < array.length; i++) {
     let item = array[i];
@@ -104,4 +105,16 @@ function submit(id) {
             `;
         }
     }
+}
+
+function star(count){
+for(let i=1;i<=5;i++){
+document.getElementById("star"+ i).style.color="black";
+
+}
+for(let i=1;i<=count;i++){
+document.getElementById("star"+ i).style.color="gold";
+}
+alert("You Rated "+ count);
+document.getElementById("carts")
 }
