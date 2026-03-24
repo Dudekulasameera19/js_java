@@ -46,7 +46,18 @@
 
 let promise1 = getStudent(2)
 console.log(promise1)
-promise1.then((student) => {
+promise1.then((student)=>{
+    return getSubject(student.id)
+})
+.then((subject)=>{
+   return getMarks(subject[0])
+})
+.then((mark)=>{
+    console.log(mark)
+})
+
+
+.then((student) => {
     return getSubject(student.id);   
 })
 .then((subject) => {
@@ -58,3 +69,29 @@ promise1.then((student) => {
 .catch((error) => {
     console.log(error);
 });
+
+let user = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let array2=[10,20,30,40,50]
+        resolve(array2[2])
+        // reject("Promise rejected due to error")
+    },1000)
+})
+console.log(user)
+user.then((divya)=>{
+   console.log(divya)
+},3000)
+
+// .catch((sesirekha)=>{
+//     console.log("this is not valid"+sesirekha)
+// })
+
+let user2=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let hello = {1:"sam",2:"divya",3:"k"}
+        resolve(hello)
+    },3000)
+})
+user2.then((name)=>{
+    console.log(name)
+})
