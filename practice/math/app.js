@@ -52,3 +52,5 @@ function product() {
 }
 
 
+// let quantifier = /ramya{2,4}/
+// console.log(quantifier.test("ram"))
