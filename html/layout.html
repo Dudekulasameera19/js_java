@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        header {
+            background-color: greenyellow;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border:1px solid black;
+        }
+
+        .content {
+            display: flex;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #d3d3d3;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            margin-right: 10px;
+            border:1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            background-color: #f5f5f5;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        article {
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: orange;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header><span><</span> Header Section <span>></span></header>
+
+        <div class="content">
+            <nav> <span>< </span>Nav <span>></span></nav>
+            <main>
+                <article style="border:none"><span><</span> main <span>></span></article>
+                <article> <span><</span> Article 1 <span>></span></article>
+                <article> <span><</span>  Article 2 <span>></span></article>
+            </main>
+        </div>
+
+        <footer> <span><</span>Footer <span>></span></footer>
+    </div>
+
+</body>
+
+</html>
