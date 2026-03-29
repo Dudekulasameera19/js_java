@@ -7,12 +7,9 @@ body {
 }
 
 #theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    order: 2;
     font-size: 28px;
     cursor: pointer;
-    z-index: 10000;
     color: var(--accent-color);
     background: rgba(0, 0, 0, 0.3);
     padding: 8px;
@@ -34,16 +31,16 @@ body {
 }
 
 .dark-mode {
-    --bg-color: #0f172a;
-    --text-color: white;
-    --navbar-bg: #111;
-    --card-bg: #1e293b;
-    --accent-color: #60a5fa;
-    --btn-bg: #1D4ED8;
+    --bg-color: #020617;
+    --text-color: #E5E7EB;
+    --navbar-bg: #0F172A;
+    --card-bg: #0F172A;
+    --accent-color: #14B8A6;
+    --btn-bg: #14B8A6;
 }
 
 * {
-    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 html {
@@ -89,19 +86,53 @@ h1::after {
 
 #home {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    justify-content: space-between;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     background: var(--navbar-bg);
-    border-bottom: 1px solid var(--accent-color);
-    gap: 20px;
+    gap: 15px;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    white-space: nowrap;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.brand:hover .logo-text {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 #home .logo {
     flex-shrink: 0;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: logoEntry 1.5s ease forwards;
 }
 
 .logo {
@@ -110,6 +141,7 @@ h1::after {
     letter-spacing: 2px;
     animation: logoEntry 1.5s ease forwards;
 }
+
 
 .logo:hover {
     transform: scale(1.08);
@@ -150,6 +182,10 @@ h1::after {
     border: 1px solid var(--btn-bg);
 }
 
+.btn3 {
+    padding: 7px 15px;
+    border-radius: 25px;
+}
 
 .btn1:hover,
 .btn2:hover,
@@ -354,15 +390,15 @@ i {
     font-size: 22px;
     margin: 10px;
     color: #2563EB;
-    transition: 0.3s;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
-
 
 .social-icons i:hover {
     transform: translateY(-5px) scale(1.2);
     background: rgba(255, 255, 255, 0.1);
-    padding: 8px;
-    border-radius: 50%;
 }
 
 .profile img {
@@ -374,6 +410,7 @@ i {
 
 .profile-info {
     max-width: 600px;
+    overflow: hidden;
 }
 
 .profile-info a {
@@ -427,9 +464,10 @@ i {
 }
 
 .skill-card:hover {
-    transform: translateY(-6px);
     border-color: #2563EB;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    margin-top: -10px;
+    transform: translateY(-10px);
 }
 
 .skill-content {
@@ -533,6 +571,12 @@ i {
     padding-top: 20px;
 }
 
+.project-card input:checked~.desc {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
 .project-card {
     width: 300px;
     padding: 15px;
@@ -599,6 +643,10 @@ i {
 
 #menu-btn {
     display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--accent-color);
+    order: 3;
 }
 
 #contact {
@@ -653,7 +701,6 @@ i {
 .left h2 {
     font-size: 30px;
     margin-bottom: 15px;
-    /* color: mediumpurple; */
 }
 
 .left p {
@@ -747,7 +794,6 @@ p {
     max-width: 1200px;
     margin: 50px auto 0;
     box-shadow: 0 20px 30px -10px #2563EB;
-    font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
@@ -936,7 +982,7 @@ p {
         border-radius: 0;
     }
 
-    #menu-toggle:checked~#home .navbar {
+    #menu-toggle:checked~.navbar {
         display: flex;
     }
 
@@ -1087,6 +1133,7 @@ p {
         height: auto;
         padding: 10px;
         position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         z-index: 1;
 
     }
