@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,74 +11,101 @@
 </head>
 
 <body>
-    <h1>My Portfolio</h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" id="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </label>
 
-    <section id="home">
-        <div class="brand">
+    <header id="main-header">
+        <div class="logo-box">
             <img src="./assets/samlogo.png" alt="logo" class="logo-img">
-            <span class="logo-text">Sameera</span>
+            <span class="site-name">Sameera</span>
         </div>
-
-        <i class="fa-solid fa-moon" id="theme-toggle"></i>
 
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="menu-btn">
             <i class="fa-solid fa-bars"></i>
         </label>
 
-        <div class="navbar">
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <nav class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <i class="fa-solid fa-moon" id="theme-toggle"></i>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="home-box">
+            <div class="intro-text show-left">
+                <h1>Hello, I'm <span>Sameera</span></h1>
+                <h2>Frontend Developer</h2>
+                <p>
+                    I develop responsive web pages using HTML, CSS and JavaScript, and I have basic knowledge of
+                    Bootstrap, Tailwind CSS and React.
+                </p>
+                <p class="small-line">
+                    I enjoy building clean layouts and modern interfaces that work smoothly on all devices.
+                </p>
+                <div class="home-buttons">
+                    <a href="#contact" class="primary-btn">Hire Me</a>
+                    <a href="https://drive.google.com/file/d/1YmazvB3I2_rDJAqSZ3KjlEWosBBoj5jy/view?usp=drive_link"
+                        class="secondary-btn">Download Resume</a>
+                </div>
+            </div>
+
+            <div class="intro-image show-zoom">
+                <div class="image-frame">
+                    <img src="./assets/developer.webp" alt="developer workspace">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="top-about">
-            <div class="profile">
-                <div class="profile-border">
+    <section id="about" class="show-up">
+        <div class="about-top">
+            <div class="profile-area show-zoom">
+                <div class="profile-frame">
                     <img src="./assets/IMG_20251019_151914.jpg" alt="profile">
                 </div>
                 <h2>Dudekula Sameera</h2>
                 <p><b>Frontend Developer</b></p>
             </div>
 
-            <div class="profile-info">
+            <div class="about-text show-right">
                 <p>
                     I am Sameera, a passionate Frontend Developer from Prakasam District (Markapuram).
-                    I hold a Bachelor's degree in Electronics and Communication Engineering from
+                    I completed my Bachelor's degree in Electronics and Communication Engineering from
                     RGUKT Srikakulam.
-
-                    I have strong skills in HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS,
-                    along with basic knowledge of Java and React.
-
-                    I enjoy building responsive, user-friendly and visually appealing applications.
                 </p>
 
-                <a href="#" class="btn1">Contact Me</a>
-                <a href="https://drive.google.com/file/d/1YmazvB3I2_rDJAqSZ3KjlEWosBBoj5jy/view?usp=drive_link"
-                    class="btn2">Download Resume</a>
+                <p>
+                    I have strong skills in HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS,
+                    along with basic knowledge of Java and React.
+                </p>
 
-                <div class="social-icons">
+                <p>
+                    I enjoy building responsive, user-friendly and visually appealing web applications.
+                    I am always interested in learning new things and improving my frontend skills through practice.
+                </p>
+
+                <a href="#contact" class="primary-btn">Contact Me</a>
+                <a href="https://drive.google.com/file/d/1YmazvB3I2_rDJAqSZ3KjlEWosBBoj5jy/view?usp=drive_link"
+                    class="secondary-btn">Download Resume</a>
+
+                <div class="social-row">
                     <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="mailto:dudekulasam19@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/-s1926/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/Dudekulasameera19"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/-s1926/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Dudekulasameera19" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </div>
-        <div class="extra-info">
-            <div class="education-box">
-                <h3>Education</h3>
 
+        <div class="info-layout">
+            <div class="info-box show-up">
+                <h3>Education</h3>
                 <p><b>B.Tech (ECE)</b></p>
                 <p>RGUKT Srikakulam</p>
                 <p>CGPA: 8.26</p>
@@ -91,205 +117,188 @@
                 <p>CGPA: 10.0</p>
             </div>
 
-            <div class="personal-box">
+            <div class="info-box show-up">
                 <h3>Personal Info</h3>
-
-                <p><b>Name:</b> <br>Dudekula Sameera</p>
+                <p><b>Name:</b> <br> Dudekula Sameera</p>
                 <p><b>Role:</b> <br> Frontend Developer</p>
-                <p><b>Phone:</b> <br>+91 9XXXXXXX58</p>
-                <p><b>Email:</b><br> dudekulasam19@gmail.com</p>
-                <p><b>Location:</b> <br>Andhra Pradesh</p>
-                <p><b>Languages:</b><br> English, Telugu, Hindi</p>
+                <p><b>Phone:</b> <br> +91 9XXXXXXX58</p>
+                <p><b>Email:</b> <br> dudekulasam19@gmail.com</p>
             </div>
-
         </div>
-
     </section>
 
-    <section id="skills">
-
+    <section id="skills" class="show-up">
         <h2>Skills</h2>
+        <p class="section-note">These are the technologies and strengths I use to build better web experiences.</p>
 
-        <div class="skills-wrapper">
-            <div class="technical">
+        <div class="skill-sec">
+            <div class="skill-side">
                 <h2>Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-card">
-                        <div class="skill-content">
+                <div class="skills-grid">
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-brands fa-html5"></i>
                             <h3>HTML</h3>
-                            <div class="progress">
-                                <div class="progress-bar html"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill html"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">HTML5, semantic tags, forms, tables.</p>
+                        <p class="skill-info">HTML5, semantic tags, forms, tables.</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-content">
+
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-brands fa-css3-alt"></i>
                             <h3>CSS</h3>
-                            <div class="progress">
-                                <div class="progress-bar css"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill css"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">Flexbox, Grid,animations,responsive design.</p>
+                        <p class="skill-info">Flexbox, Grid, animations, responsive design.</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-content">
+
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-brands fa-js"></i>
                             <h3>JavaScript</h3>
-                            <div class="progress">
-                                <div class="progress-bar js"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill js"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">DOM, events, ES6 basics.</p>
+                        <p class="skill-info">DOM, events, ES6 basics.</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-content">
+
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-brands fa-bootstrap"></i>
                             <h3>Bootstrap</h3>
-                            <div class="progress">
-                                <div class="progress-bar bootstrap"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill bootstrap"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">Responsive layouts & components.</p>
+                        <p class="skill-info">Responsive layouts and components.</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-content">
+
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-solid fa-wind"></i>
                             <h3>Tailwind</h3>
-                            <div class="progress">
-                                <div class="progress-bar tailwind"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill tailwind"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">Utility-first CSS framework.</p>
+                        <p class="skill-info">Utility-first CSS framework.</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-content">
+
+                    <div class="skill-box show-up">
+                        <div class="skill-main">
                             <i class="fa-brands fa-react"></i>
                             <h3>React</h3>
-                            <div class="progress">
-                                <div class="progress-bar react"></div>
+                            <div class="progress-line">
+                                <div class="progress-fill react"></div>
                             </div>
                         </div>
-                        <p class="skill-desc">Components, props, state basics.</p>
+                        <p class="skill-info">Components, props, state basics.</p>
                     </div>
-
                 </div>
             </div>
-            <div class="professional">
+
+            <div class="skill-side">
                 <h2>Professional Skills</h2>
 
-                <div class="professional-container">
-
-                    <div class="professional-card skill-card">
-                        <div class="skill-content">
+                <div class="soft-skills-grid">
+                    <div class="round-skill show-up">
+                        <div class="skill-main">
                             <i class="fa-solid fa-brain"></i>
                             <h3>Creativity</h3>
                         </div>
-                        <p class="skill-desc">Innovative thinking and UI ideas.</p>
+                        <p class="skill-info">Innovative thinking and UI ideas.</p>
                     </div>
 
-                    <div class="professional-card skill-card">
-                        <div class="skill-content">
+                    <div class="round-skill show-up">
+                        <div class="skill-main">
                             <i class="fa-solid fa-comments"></i>
                             <h3>Communication</h3>
                         </div>
-                        <p class="skill-desc">Clear explanation and teamwork.</p>
+                        <p class="skill-info">Clear explanation and teamwork.</p>
                     </div>
 
-                    <div class="professional-card skill-card">
-                        <div class="skill-content">
+                    <div class="round-skill show-up">
+                        <div class="skill-main">
                             <i class="fa-solid fa-lightbulb"></i>
                             <h3>Problem Solving</h3>
                         </div>
-                        <p class="skill-desc">Logical thinking & debugging.</p>
+                        <p class="skill-info">Logical thinking and debugging.</p>
                     </div>
 
-                    <div class="professional-card skill-card">
-                        <div class="skill-content">
+                    <div class="round-skill show-up">
+                        <div class="skill-main">
                             <i class="fa-solid fa-people-group"></i>
                             <h3>Team Work</h3>
                         </div>
-                        <p class="skill-desc">Collaboration and support.</p>
+                        <p class="skill-info">Collaboration and support.</p>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
     </section>
 
-    <section id="projects">
-
+    <section id="projects" class="show-up">
         <h2>My Projects</h2>
-        <div class="project-card">
+        <p class="section-note">Some of the projects I built to improve my practical frontend skills.</p>
 
-            <img src="./assets/travell.jpg" alt="travel">
+        <div class="projects-layout">
+            <div class="project-box show-up">
+                <img src="./assets/travell.jpg" alt="travel">
+                <h3>Travel Booking Application</h3>
+                <div class="project-actions">
+                    <button class="action-btn view-btn" type="button">View</button>
+                    <a href="#" class="git-btn">Github</a>
+                </div>
+                <p class="project-text">
+                    Built a responsive travel booking website using HTML, CSS, and JavaScript with clean UI sections,
+                    navigation, and mobile-friendly layout.
+                </p>
+            </div>
 
-            <h2>Travel Booking Application</h2>
+            <div class="project-box show-up">
+                <img src="./assets/villa1.jpg" alt="villa">
+                <h3>Villa Estate</h3>
+                <div class="project-actions">
+                    <button class="action-btn view-btn" type="button">View</button>
+                    <a href="#" class="git-btn">Github</a>
+                </div>
+                <p class="project-text">
+                    Developed a responsive multi-page website for showcasing villas, including Home, Properties,
+                    Property Details, and Contact pages.
+                </p>
+            </div>
 
-            <input type="radio" name="project" id="p1">
-
-            <label for="p1" class="btn3">View</label>
-
-            <a href="#" class="btn4">Github</a>
-
-            <p class="desc">
-                Built a front-end Travel Booking Application...
-            </p>
-
+            <div class="project-box show-up">
+                <img src="./assets/pageflipper.jpg" alt="page flipper">
+                <h3>Automatic Page Flipper</h3>
+                <div class="project-actions">
+                    <button class="action-btn view-btn" type="button">View</button>
+                    <a href="#" class="git-btn">Github</a>
+                </div>
+                <p class="project-text">
+                    Designed an Arduino Uno-based system to automatically flip pages for books or documents.
+                </p>
+            </div>
         </div>
-        <div class="project-card">
-
-            <img src="./assets/villa1.jpg" alt="villa">
-
-            <h2>Villa Estate</h2>
-
-            <input type="radio" name="project" id="p2">
-
-            <label for="p2" class="btn3">View</label>
-
-            <a href="#" class="btn4">Github</a>
-
-            <p class="desc">
-                Responsive villas website...
-            </p>
-
-        </div>
-        <div class="project-card">
-
-            <img src="./assets/pageflipper.jpg" alt="page flipper">
-
-            <h2>Automatic Page Flipper</h2>
-
-            <input type="radio" name="project" id="p3">
-
-            <label for="p3" class="btn3">View</label>
-
-            <a href="#" class="btn4">Github</a>
-
-            <p class="desc">
-                Arduino-based system...
-            </p>
-
-        </div>
-
     </section>
 
-    <section id="contact">
+    <section id="contact" class="show-up">
+        <h2 class="contact-heading">Contact Me</h2>
+        <p class="section-note">Have a project or opportunity? Let’s connect!</p>
 
-        <h2 class="contact-main">Contact Me</h2>
-        <p class="contact-sub">Have a project or opportunity? Let’s connect!</p>
-
-        <div class="contact-container">
-            <div class="left">
+        <div class="contact-layout">
+            <div class="contact-left show-left">
                 <h2 class="contact-title">Why Choose Me?</h2>
 
                 <p>
-                    I am a passionate and dedicated developer with strong knowledge in HTML, CSS,JavaScript,React and
-                    Java.
+                    I am a passionate and dedicated developer with strong knowledge in HTML, CSS,
+                    JavaScript, React and Java.
                     I am a quick learner and always ready to adapt to new technologies.
                 </p>
 
@@ -297,15 +306,22 @@
                     I believe in hard work, consistency, and delivering high-quality work on time.
                     I am confident that I can contribute effectively to your team and grow along with the organization.
                 </p>
+
                 <div class="contact-points">
                     <p><i class="fa-solid fa-circle-check"></i> Quick Response</p>
-                    <p><i class="fa-solid fa-circle-check"></i> Clean & Scalable Code</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Clean and Scalable Code</p>
                     <p><i class="fa-solid fa-circle-check"></i> On-time Delivery</p>
+                </div>
+
+                <div class="contact-extra">
+                    <p><i class="fa-solid fa-envelope"></i> dudekulasam19@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9XXXXXXX58</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
                 </div>
             </div>
 
-            <div class="right">
-                <h2 class="form-title">Send Me a Message</h2>
+            <div class="contact-right show-right">
+                <h2 class="form-heading">Send Me a Message</h2>
 
                 <form>
                     <label>Name :</label>
@@ -325,25 +341,23 @@
                     <label>Message :</label>
                     <textarea rows="4" placeholder="Write your message"></textarea>
 
-                    <button type="submit" rows="3" class="send-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
-
             </div>
-
         </div>
-
     </section>
 
-    <section class="footer">
-        <div class="footer-container">
-            <div class="footer-box contact-info">
+    <section class="footer-area">
+        <div class="footer-layout">
+            <div class="footer-card show-up">
                 <h4>Contact Us</h4>
                 <p><strong>Name:</strong> D. Sameera</p>
                 <p><strong>Role:</strong> Frontend Developer</p>
                 <p><strong>Phone:</strong> +91 9xxxxxxx58</p>
                 <p><strong>Address:</strong> Hyderabad, KPHB</p>
             </div>
-            <div class="footer-box footer-links">
+
+            <div class="footer-card show-up">
                 <h4>Navigate</h4>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -351,38 +365,67 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="footer-box social-icons">
+
+            <div class="footer-card show-up">
                 <h4>Connect</h4>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:dudekulasam19@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/-s1926/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Dudekulasameera19"><i class="fa-brands fa-github"></i></a>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:dudekulasam19@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/-s1926/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Dudekulasameera19" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </section>
-    <div class="footer-bottom">
-        <p>Copy right &copy; 2026; Designed by Dudekula Sameera</p>
+
+    <div class="footer-end">
+        <p>Copyright &copy; 2026; Designed by Dudekula Sameera</p>
     </div>
 
     <script>
-        const toggleBtn = document.getElementById("theme-toggle");
+        const themeToggle = document.getElementById("theme-toggle");
 
-        function applyTheme(isDark) {
-            document.body.classList.toggle("dark-mode", isDark);
-            toggleBtn.classList.toggle("fa-moon", !isDark);
-            toggleBtn.classList.toggle("fa-sun", isDark);
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        const revealItems = document.querySelectorAll(".show-up, .show-left, .show-right, .show-zoom");
+
+        function showItemsOnScroll() {
+            revealItems.forEach((item) => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < window.innerHeight - 80) {
+                    item.classList.add("show-item");
+                }
+            });
         }
 
+        window.addEventListener("scroll", showItemsOnScroll);
+        showItemsOnScroll();
 
-        const savedTheme = localStorage.getItem("darkMode") === "true";
-        applyTheme(savedTheme);
+        const projectButtons = document.querySelectorAll(".view-btn");
+        const projectBoxes = document.querySelectorAll(".project-box");
 
-        toggleBtn.addEventListener("click", () => {
-            const isDark = !document.body.classList.contains("dark-mode");
-            applyTheme(isDark);
-            localStorage.setItem("darkMode", isDark);
+        projectButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const currentBox = this.closest(".project-box");
+                const alreadyOpen = currentBox.classList.contains("active");
+
+                projectBoxes.forEach((box) => {
+                    box.classList.remove("active");
+                    box.querySelector(".view-btn").textContent = "View";
+                });
+
+                if (!alreadyOpen) {
+                    currentBox.classList.add("active");
+                    this.textContent = "Close";
+                }
+            });
         });
     </script>
+
 </body>
 
 </html>
