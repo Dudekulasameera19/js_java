@@ -331,6 +331,11 @@ img {
     border-radius: 15px;
 }
 
+#about h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
 .about-top {
     display: flex;
     gap: 40px;
@@ -632,7 +637,7 @@ img {
 .project-box {
     width: 300px;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 16px;
     padding: 15px;
     transition: 0.35s ease;
@@ -646,8 +651,9 @@ img {
     transition: transform 0.4s ease;
 }
 
+
 .project-box:hover img {
-    transform: scale(1.07);
+    transform: scale(0.97);
 }
 
 .project-text {
@@ -1024,6 +1030,7 @@ img {
         justify-content: center;
         gap: 20px;
     }
+
     .projects-layout .project-box {
         width: 45%;
     }
