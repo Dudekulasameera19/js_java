@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Events | Event Management Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="home">
+    <nav class="navbar container">
+      <div class="logo">Elite<span>Events</span></div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-text">
+        <h1>Make Every Event <span>Memorable</span></h1>
+        <p>
+          We create beautiful weddings, birthday parties, corporate events,
+          music nights, and unforgettable celebrations with style and perfection.
+        </p>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn">Book Now</a>
+          <a href="#events" class="btn btn-outline">Explore Events</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Next Big Event</h3>
+        <p class="event-title">Grand Music Night 2026</p>
+        <p class="event-date">April 20, 2026</p>
+        <div class="countdown" id="countdown">
+          <div><span id="days">00</span><small>Days</small></div>
+          <div><span id="hours">00</span><small>Hours</small></div>
+          <div><span id="minutes">00</span><small>Minutes</small></div>
+          <div><span id="seconds">00</span><small>Seconds</small></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="About Event Management">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          Elite Events is a creative event management company dedicated to making
+          your special moments extraordinary. From weddings to business conferences,
+          we plan and execute every detail with care, creativity, and professionalism.
+        </p>
+        <p>
+          Our mission is simple: deliver stress-free event experiences with elegant
+          design, quality service, and unforgettable memories.
+        </p>
+        <a href="#services" class="btn">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <h2 class="section-title center">Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Wedding Events</h3>
+          <p>Elegant wedding planning with decoration, stage design, food, and guest coordination.</p>
+        </div>
+        <div class="card">
+          <h3>Birthday Parties</h3>
+          <p>Creative birthday themes, fun activities, stunning decor, and joyful celebration setups.</p>
+        </div>
+        <div class="card">
+          <h3>Corporate Events</h3>
+          <p>Professional business meetings, seminars, launches, and office celebration management.</p>
+        </div>
+        <div class="card">
+          <h3>Music & Cultural Shows</h3>
+          <p>Live music events, concerts, cultural nights, and entertainment-focused event planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="events section" id="events">
+    <div class="container">
+      <h2 class="section-title center">Upcoming Events</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+        <button class="filter-btn" data-filter="birthday">Birthday</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="music">Music</button>
+      </div>
+
+      <div class="event-grid" id="eventContainer"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <h2 class="section-title center">Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 1">
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 2">
+        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 3">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 4">
+        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 5">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80" alt="Gallery Image 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="booking section" id="booking">
+    <div class="container">
+      <h2 class="section-title center">Book Your Event</h2>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Enter your full name" />
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Enter your email" />
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" id="phone" placeholder="Enter your phone number" />
+          <small class="error" id="phoneError"></small>
+        </div>
+
+        <div class="form-group">
+          <select id="eventType">
+            <option value="">Select Event Type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Music Show">Music Show</option>
+          </select>
+          <small class="error" id="eventTypeError"></small>
+        </div>
+
+        <div class="form-group">
+          <input type="date" id="eventDate" />
+          <small class="error" id="dateError"></small>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder="Write your event requirements"></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn form-btn">Submit Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section">
+    <div class="container">
+      <h2 class="section-title center">What Our Clients Say</h2>
+
+      <div class="testimonial-box">
+        <p id="testimonialText">
+          “Elite Events made our wedding absolutely beautiful. Everything was
+          perfectly managed and stress-free.”
+        </p>
+        <h4 id="testimonialName">- Priya & Rahul</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Contact Us</h2>
+        <p><strong>Address:</strong> Hyderabad, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@eliteevents.com</p>
+        <p>
+          We are ready to make your event stylish, smooth, and unforgettable.
+          Reach out to us today.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Professional planning team</li>
+          <li>Creative theme design</li>
+          <li>Affordable event packages</li>
+          <li>On-time execution</li>
+          <li>Customer satisfaction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Elite Events. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>Booking Submitted</h3>
+      <p>Your event request has been saved successfully.</p>
+      <button id="closePopup" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
