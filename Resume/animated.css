@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1, #e2e8f0);
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.resume {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.side {
+    background: linear-gradient(180deg, #334155, #475569);
+    padding: 35px 25px;
+}
+
+.pic {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pic img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #94a3b8;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pic img:hover {
+    border-color: #e2e8f0;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.block {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.block:hover {
+    background: #475569;
+}
+
+.block h2 {
+    font-size: 18px;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.block:hover h2 {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.block p,
+.block li {
+    font-size: 14px;
+    color: #cbd5f5;
+    line-height: 1.7;
+    transition: color 0.35s ease;
+}
+
+.block:hover p,
+.block:hover li {
+    color: #ffffff;
+}
+
+.block a {
+    color: #bfdbfe;
+    text-decoration: none;
+    transition: color 0.35s ease;
+}
+
+.block:hover a {
+    color: #ffffff;
+}
+
+.block a:hover {
+    text-decoration: underline;
+}
+
+.block ul {
+    list-style: none;
+}
+
+.block ul li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+}
+
+.block ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #bfdbfe;
+    font-size: 10px;
+    transition: color 0.35s ease;
+}
+
+.block:hover ul li::before {
+    color: #ffffff;
+}
+
+.main {
+    padding: 40px;
+    background: #f8fafc;
+}
+
+.top {
+    margin-bottom: 35px;
+}
+
+.top h1 {
+    font-size: 40px;
+    color: #1e293b;
+    margin-bottom: 8px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.top h1:hover {
+    color: #475569;
+    letter-spacing: 1px;
+}
+
+.top h3 {
+    color: #64748b;
+    letter-spacing: 3px;
+    transition: color 0.35s ease;
+}
+
+.top h3:hover {
+    color: #334155;
+}
+
+.sect {
+    margin-bottom: 30px;
+}
+
+.sect h2 {
+    color: #334155;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #cbd5e1;
+    transition: color 0.35s ease, border-color 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.sect h2:hover {
+    color: #1e293b;
+    border-color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+.sect p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+.edu-card {
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-left: 6px solid #94a3b8;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+
+}
+
+.edu-card:hover {
+    background: #94a3b8;
+    border-color: #64748b;
+}
+
+.edu-left {
+    min-width: 110px;
+}
+
+.edu-year {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #334155;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+.edu-card:hover .edu-year {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.edu-right h4 {
+    font-size: 17px;
+    color: #1e293b;
+    margin-bottom: 6px;
+    transition: color 0.35s ease;
+}
+
+.edu-right p {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 6px;
+    transition: color 0.35s ease;
+}
+
+.edu-right span {
+    font-size: 14px;
+    color: #475569;
+    font-weight: bold;
+    transition: color 0.35s ease;
+}
+
+.edu-card:hover .edu-right h4,
+.edu-card:hover .edu-right p,
+.edu-card:hover .edu-right span {
+    color: #ffffff;
+}
+
+.project-card {
+    padding: 18px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-left: 6px solid #94a3b8;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background: #94a3b8;
+    border-color: #64748b;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h4 {
+    font-size: 17px;
+    color: #1e293b;
+    margin-bottom: 8px;
+    transition: color 0.35s ease;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    transition: color 0.35s ease;
+}
+
+.project-card:hover h4,
+.project-card:hover p {
+    color: #ffffff;
+}
+
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech span {
+    background: #334155;
+    color: #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+
+.tech span:hover {
+    transform: scale(1.08);
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+i {
+    margin-right: 8px;
+    color: #bfdbfe;
+    transition: color 0.35s ease;
+}
+
+.block:hover i {
+    color: #ffffff;
+}
+
+.declare-text,
+.declare-info {
+    color: #475569;
+}
+
+.declare-name {
+    margin-top: 15px;
+    color: #1e293b;
+}
