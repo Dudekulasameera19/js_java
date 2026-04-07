@@ -10,7 +10,6 @@ function press(value) {
     let current = screen.value;
     let lastChar = current[current.length - 1];
 
-    // Prevent multiple operators in a row
     if (isOperator(value)) {
         if (current === "") return;
         if (isOperator(lastChar)) {
@@ -18,8 +17,6 @@ function press(value) {
             return;
         }
     }
-
-    // Prevent multiple decimal points in same number
     if (value === ".") {
         let parts = current.split(/[\+\-\*\/]/);
         let lastPart = parts[parts.length - 1];

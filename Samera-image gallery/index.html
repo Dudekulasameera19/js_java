@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameera-Image Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Event Image Gallery</h1>
+        <p>Click any image to view it in a larger size</p>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <section class="move">
+                <div class="card">
+                    <img src="./assets/wedding11.avif" alt="Diwali">
+                    <p>Diwali is a beautiful festival symbolizing light, happiness, and the triumph of good over evil.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding9.jpg" alt="Family Function">
+                    <p>A family function is a joyful gathering where relatives come together to celebrate special
+                        moments,
+                        strengthen bonds, and create happy memories.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding-1.png" alt="Love Marriage">
+                    <p>A love marriage is a beautiful union where two people choose each other out of love, trust, and
+                        mutual understanding.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding-3.jpg" alt="Arranged Marriage">
+                    <p>An arranged marriage is a union where families help choose compatible partners, bringing two
+                        individuals together with shared values and support.</p>
+                </div>
+            </section>
+
+            <section class="move1">
+                <div class="card">
+                    <img src="./assets/wedding-5.jpg" alt="Haldi">
+                    <p>Haldi is a cheerful pre-wedding ceremony where turmeric is applied to the bride and groom for
+                        blessings, beauty, and good luck.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding-2.jpg" alt="Muslim Marriage">
+                    <p>A Muslim marriage is a blessed union where two families come together to celebrate love, faith,
+                        and a
+                        new beginning.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding-7.jpeg" alt="Reception">
+                    <p>A reception is a joyful celebration where family and friends gather to bless the couple and share
+                        happiness after the wedding.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/wedding-6.jpg" alt="Engagement">
+                    <p>An engagement is a special occasion where two people commit to a future together, celebrated with
+                        love, family, and happiness.</p>
+                </div>
+            </section>
+        </section>
+
+        <div id="popup" class="popup-box">
+            <span id="close" class="close-btn">X</span>
+
+            <button id="prev" class="nav-btn prev">&#10094;</button>
+            <button id="next" class="nav-btn next">&#10095;</button>
+
+            <div class="popup-card">
+                <div class="popup-inner">
+                    <div class="popup-front">
+                        <img id="bigImage" src="" alt="image view">
+                    </div>
+                    <div class="popup-back">
+                        <p id="text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

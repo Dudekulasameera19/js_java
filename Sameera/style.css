@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:whitesmoke;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.topbar {
+  top: 0;
+  position: sticky;
+  background-color:white;
+  border-bottom: 1px solid #dddddd;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar {
+  text-decoration: none;
+  color: #333333;
+  font-size:20px;
+  transition: 0.3s;
+}
+
+.nav-bar:hover {
+  color: orangered;
+}
+
+.banner {
+  min-height: 100vh;
+  background-image: url("./assets/developer.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-header {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.banner-content {
+  position: relative;
+  color: white;
+  width: 90%;
+  max-width: 700px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.dashboard-section {
+  padding: 80px 0;
+  background-color: #eef4ff;
+}
+
+.dashboard-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 20px;
+}
+
+.dashboard-header,
+.sidebar,
+.main-content,
+.main-foot {
+  background-color:white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header {
+  grid-area: header;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.main-content h2 {
+  margin-bottom: 15px;
+}
+
+.main-content p {
+  color: #555555;
+}
+
+.main-foot {
+  grid-area: footer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cards-section {
+  padding: 80px 0;
+  background-color: #f9fafb;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.section-title p {
+  color: #666666;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  min-height: 200px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-box:hover {
+  transform: translateY(-8px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-top h3 {
+  font-size: 18px;
+  color: #222222;
+}
+
+.card-top span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0ecff;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-box p {
+  font-size: 18px;
+  color: #555555;
+}
+
+.gallery-section {
+  padding: 80px 0;
+  background-color: #f1f5f9;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-box {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gallery-box:hover img {
+  transform: scale(1.1);
+}
+
+.page {
+  display: none;
+}
+
+.active-page {
+  display: block;
+}
+
+.inner-page {
+  padding: 140px 0 80px;
+  min-height: 100vh;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.title-box p {
+  max-width: 700px;
+  margin: auto;
+  color: #555555;
+  padding:10px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.about-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+}
+
+.about-card h3 {
+  margin-bottom: 12px;
+  color: #333333;
+}
+
+.about-card p {
+  color: #555555;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.heading h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.brace {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  border-color: #3498db;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.send-btn:hover {
+  background-color: #2980b9;
+}
+
+.foot {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.last p {
+  margin: 5px;
+  font-size: 14px;
+}
+@media (max-width: 425px){
+
+}
+@media (min-width: 426px) and (max-width: 768px){
+
+}
+@media (min-width: 1024px) and (max-width: 1440px){
+
+}
+@media (min-width: 1441px) and (max-width: 2560px){
+
+}
